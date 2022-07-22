@@ -1,0 +1,28 @@
+{
+    "env": {
+        "browser": true,
+        "node": true,
+        "es2021": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "./tsconfig.json",
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    // "extends": ["eslint:recommended"],
+    "plugins": ["@typescript-eslint"],
+    "rules": {
+        // "simple-import-sort/exports": "error",
+        // "simple-import-sort/imports": "error",
+        // "import/first": "error",
+        // "import/newline-after-import": "error",
+        // "@typescript-eslint/no-unused-vars": 2
+        "@typescript-eslint/consistent-type-imports": "error",
+        "@typescript-eslint/consistent-type-exports": "error"
+    },
+    "settings": {}
+}
