@@ -1,6 +1,6 @@
 {
     "name": "@juyren/eslint-config-personal",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "repository": "git@github.com:JuyRen/eslint-config-personal.git",
     "license": "MIT",
     "main": "index.js",
@@ -12,7 +12,7 @@
     ],
     "files": [
         "index.js",
-        ".eslintrc",
+        ".eslintrc.json",
         "README.md"
     ],
     "publishConfig": {
