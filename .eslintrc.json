@@ -48,6 +48,5 @@
         "import/first": "error", // import语法必须在最顶层
         "import/newline-after-import": "error", // 最后一个import语法后面必须换行
         "import/no-duplicates": "error" // 不允许重复声明，对 import type 不影响
-    },
-    "settings": {}
+    }
 }
