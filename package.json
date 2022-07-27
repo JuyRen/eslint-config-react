@@ -1,6 +1,6 @@
 {
     "name": "@juyren/eslint-config-personal",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "repository": "git@github.com:JuyRen/eslint-config-personal.git",
     "license": "MIT",
     "main": "index.js",
