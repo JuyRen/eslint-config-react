@@ -14,39 +14,28 @@
     "plugins": ["simple-import-sort", "import"],
     "rules": {
         "simple-import-sort/exports": "error",
-        /**
-         *  https://github.com/lydell/eslint-plugin-simple-import-sort/blob/main/examples/.eslintrc.js
-         *  groups.custom.js
-         */
         "simple-import-sort/imports": [
             "error",
             {
                 "groups": [
-                    // Node.js API顺序
                     [
                         "^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)"
                     ],
-                    // 第三方依赖顺序
                     ["^react", "^umi", "^antd", "^\\w", "^@?\\w"],
-                    // 本地别名配置
                     [
                         "^(config)(/.*|$)",
                         "^(@|@assets|@components|@hooks|@services|@styles|@utils)(/.*|$)"
                     ],
-                    // Side effect imports.
                     ["^\\u0000"],
-                    // Parent imports. Put `..` last.
                     ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
-                    // Other relative imports. Put same-folder imports and `.` last.
                     ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
-                    // Style imports.
                     ["^.+\\.(less|css)$"]
                 ]
             }
         ],
 
-        "import/first": "error", // import语法必须在最顶层
-        "import/newline-after-import": "error", // 最后一个import语法后面必须换行
-        "import/no-duplicates": "error" // 不允许重复声明，对 import type 不影响
+        "import/first": "error",
+        "import/newline-after-import": "error",
+        "import/no-duplicates": "error"
     }
 }
