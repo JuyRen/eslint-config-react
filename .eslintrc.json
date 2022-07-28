@@ -1,44 +1,74 @@
 {
-    "env": {
-        "browser": true,
-        "node": true,
-        "es2021": true
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:promise/recommended",
+    "plugin:import/typescript",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "plugins": ["simple-import-sort", "import", "@typescript-eslint"],
-    "rules": {
-        "simple-import-sort/exports": "error",
-        "simple-import-sort/imports": [
-            "error",
-            {
-                "groups": [
-                    [
-                        "^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)"
-                    ],
-                    ["^react", "^umi", "^antd", "^\\w", "^@?\\w"],
-                    [
-                        "^(config)(/.*|$)",
-                        "^(@|@assets|@components|@hooks|@services|@styles|@utils)(/.*|$)"
-                    ],
-                    ["^\\u0000"],
-                    ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
-                    ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
-                    ["^.+\\.(less|css)$"]
-                ]
-            }
-        ],
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "promise",
+    "import",
+    "react",
+    "@typescript-eslint",
+    "simple-import-sort",
+    "prettier"
+  ],
 
-        "import/first": "error",
-        "import/newline-after-import": "error",
-        "import/no-duplicates": "error",
+  "rules": {
+    "@typescript-eslint/consistent-type-imports": "error",
 
-        "@typescript-eslint/consistent-type-imports": "error"
-    }
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          [
+            "^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)"
+          ],
+          ["^react", "^umi", "^antd", "^\\w", "^@?\\w"],
+          [
+            "^(config)(/.*|$)",
+            "^(@|@assets|@components|@hooks|@services|@styles|@utils)(/.*|$)"
+          ],
+          ["^\\u0000"],
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          ["^.+\\.(less|css)$"]
+        ]
+      }
+    ],
+
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".tsx", "ts", ".jsx", "js"] }
+    ],
+
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never",
+        "jsx": "never",
+        "js": "never"
+      }
+    ]
+  }
 }
