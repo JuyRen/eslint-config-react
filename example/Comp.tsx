@@ -2,10 +2,11 @@
 import type { MutableRefObject } from "react";
 import { useEffect, useState } from "react";
 
-import appPng from "./app.png";
+import appPng from "@assets/app.png";
+
+import timeSvg from "./assets/icons/time.svg";
 import myData from "./data.json";
 import time from "./promise";
-import timeSvg from "./time.svg";
 
 interface Props {
   name: string;
