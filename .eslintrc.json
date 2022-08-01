@@ -39,6 +39,7 @@
   },
   "rules": {
     "@typescript-eslint/consistent-type-imports": "error",
+    "@typescript-eslint/no-var-requires": "off",
 
     "simple-import-sort/exports": "error",
     "simple-import-sort/imports": [
