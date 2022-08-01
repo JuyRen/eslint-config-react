@@ -1,6 +1,6 @@
 {
   "name": "@juyren/eslint-config-react",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": "git@github.com:JuyRen/eslint-config-react.git",
   "license": "MIT",
   "main": "index.js",
