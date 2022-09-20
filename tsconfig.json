@@ -16,6 +16,7 @@
       "@assets/*": ["example/assets/*"]
     },
 
+    "lib": ["ES2015", "DOM"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
 
